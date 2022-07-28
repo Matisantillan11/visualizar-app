@@ -60,7 +60,7 @@ export const Onboarding = () => {
           Descubre el MUNDO de los libros a través de la REALIDAD AUMENTADA
         </SText>
 
-        <SText color="#B2B2B2" fontSize="14px" fontWeight="regular">
+        <SText color="#B2B2B2" fontSize="14px" fontWeight="500">
           Leer no tiene porque ser aburrido. Con la REALIDAD AUMENTADA ahora
           podes divertirte y aprender al mismo tiempo. Unite!
         </SText>
