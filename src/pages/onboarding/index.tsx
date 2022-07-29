@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Image,
+  Pressable,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -10,35 +11,26 @@ import {
 import styled from 'styled-components/native';
 import hero from '../../assets/images/virtual-reality.png';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {StackScreenProps} from '@react-navigation/stack';
+import {ImageStyle} from '../../lib/styles/default/image/image.style';
+import {SText} from '../../components/Text';
 
 const SView = styled.View`
   flex: 1;
   background-color: #341470;
 `;
 
-const SText = styled.Text`
-  color: ${(props: any) => (props.color ? props.color : '#ffffff')};
-  font-size: ${(props: any) => (props.fontSize ? props.fontSize : '20px')};
-  font-weight: ${(props: any) =>
-    props.fontWeight ? props.fontWeight : 'bold'};
-  text-align: center;
-  margin-left: 41px;
-  margin-right: 23px;
-  margin-top: ${(props: any) => (props.marginTop ? props.marginTop : '10px')};
-  margin-bottom: ${(props: any) =>
-    props.maginBottom ? props.maginBottom : '10px'};
-`;
-
-const SOnboardinButton = styled.Pressable`
-  width: 30;
-  height: 30;
+const SOnboardinButton = styled(Pressable)`
+  width: 30px;
+  height: 30px;
   background-color: #673bb7;
   border-radius: 50;
   justify-content: center;
   align-items: center;
 `;
 
-export const Onboarding = () => {
+interface Props extends StackScreenProps<any, any> {}
+export const Onboarding = ({navigation}: Props) => {
   const {width, height} = useWindowDimensions();
 
   return (
@@ -47,11 +39,11 @@ export const Onboarding = () => {
         <Image
           source={hero}
           style={[
-            styles.hero,
+            ImageStyle.hero,
             {
               width: width * 0.9,
               height: height * 0.35,
-              marginVertical: height * 0.15,
+              marginVertical: height * 0.1,
               marginHorizontal: width * 0.05,
             },
           ]}
@@ -60,7 +52,7 @@ export const Onboarding = () => {
           Descubre el MUNDO de los libros a través de la REALIDAD AUMENTADA
         </SText>
 
-        <SText color="#B2B2B2" fontSize="14px" fontWeight="500">
+        <SText color="#B2B2B2" size="14px" weight="500">
           Leer no tiene porque ser aburrido. Con la REALIDAD AUMENTADA ahora
           podes divertirte y aprender al mismo tiempo. Unite!
         </SText>
@@ -72,7 +64,7 @@ export const Onboarding = () => {
               marginTop: 18,
             },
           ]}>
-          <SOnboardinButton>
+          <SOnboardinButton onPress={() => navigation.navigate('Login')}>
             <Icon name="chevron-forward-outline" size={20} color={'#ffffff'} />
           </SOnboardinButton>
         </View>
@@ -90,8 +82,5 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  hero: {
-    resizeMode: 'contain',
   },
 });
