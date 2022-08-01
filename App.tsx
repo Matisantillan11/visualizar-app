@@ -8,10 +8,10 @@
  * @format
  */
 import 'react-native-gesture-handler';
-import React, {type PropsWithChildren} from 'react';
+import React from 'react';
 import {AuthNavigator} from './src/navigators/AuthNavigator';
-import {Onboarding} from './src/pages/onboarding';
-import {NavigationContainer, StackActions} from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
+
 const App = () => {
   return (
     <NavigationContainer>

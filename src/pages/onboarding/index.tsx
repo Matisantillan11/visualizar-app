@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   Image,
   Pressable,
@@ -14,6 +14,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {StackScreenProps} from '@react-navigation/stack';
 import {ImageStyle} from '../../lib/styles/default/image/image.style';
 import {SText} from '../../components/Text';
+import SplashScreen from 'react-native-splash-screen';
 
 const SView = styled.View`
   flex: 1;
@@ -31,6 +32,10 @@ const SOnboardinButton = styled(Pressable)`
 
 interface Props extends StackScreenProps<any, any> {}
 export const Onboarding = ({navigation}: Props) => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   const {width, height} = useWindowDimensions();
 
   return (
