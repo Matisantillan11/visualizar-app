@@ -15,6 +15,7 @@ import {StackScreenProps} from '@react-navigation/stack';
 import {ImageStyle} from '../../lib/styles/default/image/image.style';
 import {SText} from '../../components/Text';
 import SplashScreen from 'react-native-splash-screen';
+import {RootStackParamList} from '../../navigators/AuthNavigator';
 
 const SView = styled.View`
   flex: 1;
@@ -30,7 +31,7 @@ const SOnboardinButton = styled(Pressable)`
   align-items: center;
 `;
 
-interface Props extends StackScreenProps<any, any> {}
+interface Props extends StackScreenProps<RootStackParamList, 'Onboarding'> {}
 export const Onboarding = ({navigation}: Props) => {
   useEffect(() => {
     SplashScreen.hide();

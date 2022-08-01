@@ -11,5 +11,6 @@ export interface IText {
   marginT?: string;
   marginB?: string;
   marginL?: string;
+  marginR?: string;
   align?: string;
 }

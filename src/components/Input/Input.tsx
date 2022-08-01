@@ -27,7 +27,7 @@ export const SCustomInput = (props: any) => {
   return (
     <SInputWrapper>
       {leftIcon}
-      <SInput {...InputStyledProps} marginR={rigthIcon ? '5px' : 15} />
+      <SInput {...InputStyledProps} marginR={rigthIcon ? '5px' : '0px'} />
       {rigthIcon}
     </SInputWrapper>
   );

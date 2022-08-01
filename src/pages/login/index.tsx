@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import {SText, STitle} from '../../components/Text';
 import {SCustomInput} from '../../components/Input/Input';
+import {SCustomButton} from '../../components/Button/Button';
 import {colors} from '../../lib/theme/colors';
 
 //styles
@@ -20,9 +21,11 @@ import {InputStyle} from '../../lib/styles/default/Input/input.style';
 
 //Images
 import Hero from '../../assets/images/secure-login.png';
-import {SCustomButton} from '../../components/Button/Button';
 
-export const Login = () => {
+//props
+import {ILoginProps} from '../../controllers/login/login.controller';
+
+export const Login = ({navigation}: ILoginProps) => {
   const {width, height} = useWindowDimensions();
   const margin = width * 0.03;
   return (
@@ -77,9 +80,10 @@ export const Login = () => {
         />
         <Pressable>
           <SText
+            onPress={() => navigation.navigate('ForgotPassword')}
             align="right"
             size="14px"
-            marginL="0px"
+            marginR="0px"
             color={colors.mediumPurple}
             weight="700">
             Olvidaste tu contrasena?
