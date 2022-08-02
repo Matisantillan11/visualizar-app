@@ -3,11 +3,13 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {Onboarding as OnboardingScreen} from '../pages/onboarding';
 import {LoginController as LoginScreen} from '../controllers/login/login.controller';
 import {ForgotPasswordController as ForgotScreen} from '../controllers/forgotPassword/forgotPassword.controller';
+import {CheckEmailController as CheckEmailPage} from '../controllers/checkEmail/checkEmail.controller';
 
 export type RootStackParamList = {
   Onboarding: undefined;
   Login: undefined;
   ForgotPassword: undefined;
+  CheckEmail: undefined;
 };
 
 export const AuthNavigator = () => {
@@ -18,6 +20,7 @@ export const AuthNavigator = () => {
       <Stack.Screen name="Onboarding" component={OnboardingScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="ForgotPassword" component={ForgotScreen} />
+      <Stack.Screen name="CheckEmail" component={CheckEmailPage} />
     </Stack.Navigator>
   );
 };

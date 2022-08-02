@@ -11,7 +11,8 @@ import {SCustomInput} from '../../components/Input/Input';
 import {InputStyle} from '../../lib/styles/default/Input/input.style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {SCustomButton} from '../../components/Button/Button';
-export const ForgotPassword = (props: IForgotPasswordProps) => {
+
+export const ForgotPassword = ({navigation}: IForgotPasswordProps) => {
   const {width, height} = useWindowDimensions();
   const margin = width * 0.03;
   return (
@@ -69,6 +70,7 @@ export const ForgotPassword = (props: IForgotPasswordProps) => {
           textColor={colors.white}
           textWeight="700"
           textSize="14px"
+          onPress={() => navigation.navigate('CheckEmail')}
         />
       </View>
     </SafeAreaView>

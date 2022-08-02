@@ -3,6 +3,7 @@ export const colors = {
   darkerPurple: '#341470',
   darkPurple: '#673BB7',
   mediumPurple: '#8F5AEF',
+  mediumPurple10: 'rgba(143, 90, 239, 0.4)',
   lightPurple: '#686076',
   lightGray: '#9F9F9F',
   gray: '#B2B2B2',
