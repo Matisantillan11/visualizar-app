@@ -26,7 +26,7 @@ const SOnboardinButton = styled(Pressable)`
   width: 30px;
   height: 30px;
   background-color: #673bb7;
-  border-radius: 50;
+  border-radius: 50px;
   justify-content: center;
   align-items: center;
 `;

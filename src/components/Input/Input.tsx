@@ -9,8 +9,8 @@ export const SInput = styled(TextInput)`
   font-size: ${(props: IInput) => (props.size ? props.size : '14px')};
   font-weight: ${(props: IInput) => (props.weight ? props.weight : '600')};
   color: ${(props: IInput) => (props.color ? props.color : colors.lightPurple)};
-  margin-left: 5px;
-  margin-right: ${(props: IInput) => props.marginR && props.marginR};
+  margin-left: ${(props: IInput) => (props.marginL ? props.marginL : '15px')};
+  margin-right: ${(props: IInput) => (props.marginR ? props.marginR : '15px')};
 `;
 
 const SInputWrapper = styled(View)`
@@ -27,7 +27,7 @@ export const SCustomInput = (props: any) => {
   return (
     <SInputWrapper>
       {leftIcon}
-      <SInput {...InputStyledProps} marginR={rigthIcon ? '5px' : '0px'} />
+      <SInput {...InputStyledProps} />
       {rigthIcon}
     </SInputWrapper>
   );

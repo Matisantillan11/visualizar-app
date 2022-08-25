@@ -3,10 +3,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import {
   Image,
-  Platform,
   Pressable,
   SafeAreaView,
-  Text,
   useWindowDimensions,
   View,
 } from 'react-native';
@@ -25,7 +23,12 @@ import Hero from '../../assets/images/secure-login.png';
 //props
 import {ILoginProps} from '../../controllers/login/login.controller';
 
-export const Login = ({navigation}: ILoginProps) => {
+export interface ILoginComponentProps extends ILoginProps {
+  email: string;
+  password: string;
+  setEmail?: (prevState: string) => string;
+}
+export const Login = ({navigation, email}: ILoginComponentProps) => {
   const {width, height} = useWindowDimensions();
   const margin = width * 0.03;
   return (
@@ -60,9 +63,11 @@ export const Login = ({navigation}: ILoginProps) => {
           placeholder="Correo electronico"
           marginT={`${margin}px`}
           marginB={`${margin}px`}
-          marginL={'0px'}
+          marginL={'5px'}
           placeholderTextColor={colors.lightGray}
           style={InputStyle.inputStyle}
+          name="email"
+          marginR="25px"
           leftIcon={
             <Icon name="alternate-email" size={15} color={colors.lightGray} />
           }
@@ -72,8 +77,9 @@ export const Login = ({navigation}: ILoginProps) => {
           placeholder="Contrasena"
           marginT={`${margin}px`}
           marginB={`${margin}px`}
-          marginL={'0px'}
+          marginL={'5px'}
           placeholderTextColor={colors.lightGray}
+          name="password"
           style={InputStyle.inputStyle}
           leftIcon={<Icon name="lock" size={15} color={colors.lightGray} />}
           rigthIcon={<Ionicon name="eye" size={15} color={colors.lightGray} />}
