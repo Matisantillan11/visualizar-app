@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../../theme/colors';
+import {colors} from '@visualizar/lib/theme/colors';
 
 export const InputStyle = StyleSheet.create({
   inputStyle: {

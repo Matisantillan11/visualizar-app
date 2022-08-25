@@ -8,16 +8,16 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
-import styled from 'styled-components/native';
-import hero from '../../assets/images/virtual-reality.png';
+import styled from 'styled-components';
+import hero from '@visualizar/assets/images/virtual-reality.png';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {StackScreenProps} from '@react-navigation/stack';
-import {ImageStyle} from '../../lib/styles/default/image/image.style';
-import {SText} from '../../components/Text';
+import {ImageStyle} from '@visualizar/lib/styles/default/image/image.style';
+import {SText} from '@visualizar/components/Text';
 import SplashScreen from 'react-native-splash-screen';
-import {RootStackParamList} from '../../navigators/AuthNavigator';
+import {RootStackParamList} from '@visualizar/navigators/AuthNavigator';
 
-const SView = styled.View`
+const SView = styled(View)`
   flex: 1;
   background-color: #341470;
 `;

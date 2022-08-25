@@ -1,7 +1,7 @@
 import {StackScreenProps} from '@react-navigation/stack';
 import React, {useState} from 'react';
-import {RootStackParamList} from '../../navigators/AuthNavigator';
-import {Login as LoginPage} from '../../pages/login';
+import {RootStackParamList} from '@visualizar/navigators/AuthNavigator';
+import {Login as LoginPage} from '@visualizar/pages/login';
 
 export interface ILoginProps
   extends StackScreenProps<RootStackParamList, 'Login'> {}

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Pressable} from 'react-native';
-import {colors} from '../../lib/theme/colors';
-import {IButton, IButtonStyle} from '../../interfaces/components/Button';
-import {SText} from '../Text';
+import {colors} from '@visualizar/lib/theme/colors';
+import {IButton, IButtonStyle} from '@visualizar/interfaces/components/Button';
+import {SText} from '@visualizar/components/Text';
 
 const SButton = styled(Pressable)`
   background-color: ${(props: IButtonStyle) =>

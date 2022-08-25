@@ -8,20 +8,20 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
-import {SText, STitle} from '../../components/Text';
-import {SCustomInput} from '../../components/Input/Input';
-import {SCustomButton} from '../../components/Button/Button';
-import {colors} from '../../lib/theme/colors';
+import {SText, STitle} from '@visualizar/components/Text';
+import {SCustomInput} from '@visualizar/components/Input/Input';
+import {SCustomButton} from '@visualizar/components/Button/Button';
+import {colors} from '@visualizar/lib/theme/colors';
 
 //styles
-import {ImageStyle} from '../../lib/styles/default/image/image.style';
-import {InputStyle} from '../../lib/styles/default/Input/input.style';
+import {ImageStyle} from '@visualizar/lib/styles/default/image/image.style';
+import {InputStyle} from '@visualizar/lib/styles/default/Input/input.style';
 
 //Images
-import Hero from '../../assets/images/secure-login.png';
+import Hero from '@visualizar/assets/images/secure-login.png';
 
 //props
-import {ILoginProps} from '../../controllers/login/login.controller';
+import {ILoginProps} from '@visualizar/controllers/login/login.controller';
 
 export interface ILoginComponentProps extends ILoginProps {
   email: string;

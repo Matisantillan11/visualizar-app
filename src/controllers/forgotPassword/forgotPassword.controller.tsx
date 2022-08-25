@@ -1,7 +1,7 @@
 import {StackScreenProps} from '@react-navigation/stack';
 import React from 'react';
-import {RootStackParamList} from '../../navigators/AuthNavigator';
-import {ForgotPassword as ForgotPasswordPage} from '../../pages/forgotPassword/forgotPassword';
+import {RootStackParamList} from '@visualizar/navigators/AuthNavigator';
+import {ForgotPassword as ForgotPasswordPage} from '@visualizar/pages/forgotPassword/forgotPassword';
 
 export interface IForgotPasswordProps
   extends StackScreenProps<RootStackParamList, 'ForgotPassword'> {}

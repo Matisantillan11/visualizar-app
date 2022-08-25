@@ -1,16 +1,16 @@
 import React from 'react';
 import {SafeAreaView, Image, useWindowDimensions, View} from 'react-native';
-import {SText, STitle} from '../../components/Text';
-import {IForgotPasswordProps} from '../../controllers/forgotPassword/forgotPassword.controller';
-import {ImageStyle} from '../../lib/styles/default/image/image.style';
-import {colors} from '../../lib/theme/colors';
+import {SText, STitle} from '@visualizar/components/Text';
+import {IForgotPasswordProps} from '@visualizar/controllers/forgotPassword/forgotPassword.controller';
+import {ImageStyle} from '@visualizar/lib/styles/default/image/image.style';
+import {colors} from '@visualizar/lib/theme/colors';
 
 // images
-import hero from '../../assets/images/contact-us.png';
-import {SCustomInput} from '../../components/Input/Input';
-import {InputStyle} from '../../lib/styles/default/Input/input.style';
+import hero from '@visualizar/assets/images/contact-us.png';
+import {SCustomInput} from '@visualizar/components/Input/Input';
+import {InputStyle} from '@visualizar/lib/styles/default/Input/input.style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {SCustomButton} from '../../components/Button/Button';
+import {SCustomButton} from '@visualizar/components/Button/Button';
 
 export const ForgotPassword = ({navigation}: IForgotPasswordProps) => {
   const {width, height} = useWindowDimensions();

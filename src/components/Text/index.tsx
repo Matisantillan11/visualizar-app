@@ -1,7 +1,7 @@
 import {Text} from 'react-native';
 import styled from 'styled-components';
-import {IText, ITitle} from '../../interfaces/components/Text';
-import {colors} from '../../lib/theme/colors';
+import {IText, ITitle} from '@visualizar/interfaces/components/Text';
+import {colors} from '@visualizar/lib/theme/colors';
 
 export const STitle = styled(Text)`
   font-size: ${(props: ITitle) => (props.size ? props.size : '24px')};

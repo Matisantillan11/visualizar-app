@@ -6,10 +6,10 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
-import {colors} from '../../lib/theme/colors';
-import EmailIcon from '../../assets/images/email-icon.png';
-import {SText, STitle} from '../../components/Text';
-import {SCustomButton} from '../../components/Button/Button';
+import {colors} from '@visualizar/lib/theme/colors';
+import EmailIcon from '@visualizar/assets/images/email-icon.png';
+import {SText, STitle} from '@visualizar/components/Text';
+import {SCustomButton} from '@visualizar/components/Button/Button';
 export const CheckEmail = () => {
   const {width, height} = useWindowDimensions();
   return (

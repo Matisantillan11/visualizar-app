@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {StyleSheet, TextInput, View} from 'react-native';
-import {IInput} from '../../interfaces/components/Input';
-import {colors} from '../../lib/theme/colors';
+import {IInput} from '@visualizar/interfaces/components/Input';
+import {colors} from '@visualizar/lib/theme/colors';
 
 export const SInput = styled(TextInput)`
   width: 100%;
