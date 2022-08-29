@@ -22,13 +22,17 @@ import Hero from '@visualizar/assets/images/secure-login.png';
 
 //props
 import {ILoginProps} from '@visualizar/controllers/login/login.controller';
+import {
+  EmailInput,
+  PasswordInput,
+} from '@visualizar/components/Input/atoms/input.atom';
 
 export interface ILoginComponentProps extends ILoginProps {
-  email: string;
-  password: string;
-  setEmail?: (prevState: string) => string;
+  email?: string;
+  password?: string;
+  setEmail?: any;
 }
-export const Login = ({navigation, email}: ILoginComponentProps) => {
+export const Login = ({navigation}: ILoginComponentProps) => {
   const {width, height} = useWindowDimensions();
   const margin = width * 0.03;
   return (
@@ -58,32 +62,8 @@ export const Login = ({navigation, email}: ILoginComponentProps) => {
           marginVertical: height * 0.025,
           justifyContent: 'flex-end',
         }}>
-        <SCustomInput
-          keyboardType="email-address"
-          placeholder="Correo electronico"
-          marginT={`${margin}px`}
-          marginB={`${margin}px`}
-          marginL={'5px'}
-          placeholderTextColor={colors.lightGray}
-          style={InputStyle.inputStyle}
-          name="email"
-          marginR="25px"
-          leftIcon={
-            <Icon name="alternate-email" size={15} color={colors.lightGray} />
-          }
-        />
-        <SCustomInput
-          keyboardType="default"
-          placeholder="Contrasena"
-          marginT={`${margin}px`}
-          marginB={`${margin}px`}
-          marginL={'5px'}
-          placeholderTextColor={colors.lightGray}
-          name="password"
-          style={InputStyle.inputStyle}
-          leftIcon={<Icon name="lock" size={15} color={colors.lightGray} />}
-          rigthIcon={<Ionicon name="eye" size={15} color={colors.lightGray} />}
-        />
+        <EmailInput margin={margin} />
+        <PasswordInput />
         <Pressable>
           <SText
             onPress={() => navigation.navigate('ForgotPassword')}

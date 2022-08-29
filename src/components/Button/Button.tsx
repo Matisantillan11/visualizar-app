@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import {Pressable} from 'react-native';
 import {colors} from '@visualizar/lib/theme/colors';
-import {IButton, IButtonStyle} from '@visualizar/interfaces/components/Button';
+import {
+  IButton,
+  IButtonStyle,
+} from '@visualizar/components/Button/interfaces/Button';
 import {SText} from '@visualizar/components/Text';
 
 const SButton = styled(Pressable)`
