@@ -10,7 +10,7 @@ import {colors} from '@visualizar/lib/theme/colors';
 import EmailIcon from '@visualizar/assets/images/email-icon.png';
 import {SText, STitle} from '@visualizar/components/Text';
 import {SCustomButton} from '@visualizar/components/Button/Button';
-export const CheckEmail = () => {
+export const CheckEmail = ({openEmail}: any) => {
   const {width, height} = useWindowDimensions();
   return (
     <SafeAreaView>
@@ -35,6 +35,7 @@ export const CheckEmail = () => {
       <View style={{height: height * 0.25}}>
         <SCustomButton
           text="Abrir correo"
+          onPress={openEmail}
           textAlign="center"
           textColor={colors.white}
           textSize="14px"

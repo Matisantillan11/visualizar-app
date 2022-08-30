@@ -9,4 +9,6 @@ export const colors = {
   gray: '#B2B2B2',
   white: '#FFFFFF',
   darkWhite: '#D4D4D4',
+  errorColor: '#E83845',
+  successColor: '#37c871',
 };

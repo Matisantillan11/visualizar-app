@@ -11,11 +11,14 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import {AuthNavigator} from './src/navigators/AuthNavigator';
 import {NavigationContainer} from '@react-navigation/native';
+import Toast from 'react-native-toast-message';
+import {toastConfig} from '@visualizar/utils/toast.config';
 
 const App = () => {
   return (
     <NavigationContainer>
       <AuthNavigator />
+      <Toast config={toastConfig} />
     </NavigationContainer>
   );
 };
