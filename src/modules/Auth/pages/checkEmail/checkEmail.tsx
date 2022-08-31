@@ -8,8 +8,8 @@ import {
 } from 'react-native';
 import {colors} from '@visualizar/lib/theme/colors';
 import EmailIcon from '@visualizar/assets/images/email-icon.png';
-import {SText, STitle} from '@visualizar/components/Text';
-import {SCustomButton} from '@visualizar/components/Button/Button';
+import {SText, STitle} from '@visualizar/common/Text';
+import {SCustomButton} from '@visualizar/common/Button/Button';
 export const CheckEmail = ({openEmail}: any) => {
   const {width, height} = useWindowDimensions();
   return (

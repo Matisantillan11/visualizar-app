@@ -1,9 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Onboarding as OnboardingScreen} from '@visualizar/pages/onboarding';
-import {LoginController as LoginScreen} from '@visualizar/controllers/login/login.controller';
-import {ForgotPasswordController as ForgotScreen} from '@visualizar/controllers/forgotPassword/forgotPassword.controller';
-import {CheckEmailController as CheckEmailPage} from '@visualizar/controllers/checkEmail/checkEmail.controller';
+import {Onboarding as OnboardingScreen} from '@visualizar/modules/Auth/pages/onboarding';
+import {LoginController as LoginScreen} from '@visualizar/modules/Auth/controllers/login/login.controller';
+import {ForgotPasswordController as ForgotScreen} from '@visualizar/modules/Auth/controllers/forgotPassword/forgotPassword.controller';
+import {CheckEmailController as CheckEmailPage} from '@visualizar/modules/Auth/controllers/checkEmail/checkEmail.controller';
 
 export type RootStackParamList = {
   Onboarding: undefined;

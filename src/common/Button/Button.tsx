@@ -5,8 +5,8 @@ import {colors} from '@visualizar/lib/theme/colors';
 import {
   IButton,
   IButtonStyle,
-} from '@visualizar/components/Button/interfaces/Button';
-import {SText} from '@visualizar/components/Text';
+} from '@visualizar/common/Button/interfaces/Button';
+import {SText} from '@visualizar/common/Text';
 
 const SButton = styled(Pressable)`
   background-color: ${(props: IButtonStyle) =>

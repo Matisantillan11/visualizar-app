@@ -1,17 +1,17 @@
 import React from 'react';
 import {SafeAreaView, Image, useWindowDimensions, View} from 'react-native';
-import {SText, STitle} from '@visualizar/components/Text';
-import {IForgotPasswordProps} from '@visualizar/controllers/forgotPassword/forgotPassword.controller';
+import {SText, STitle} from '@visualizar/common/Text';
+import {IForgotPasswordProps} from '@visualizar/modules/Auth/controllers/forgotPassword/forgotPassword.controller';
 import {ImageStyle} from '@visualizar/lib/styles/default/image/image.style';
 import {colors} from '@visualizar/lib/theme/colors';
 
 // images
 import hero from '@visualizar/assets/images/contact-us.png';
-import {SCustomInput} from '@visualizar/components/Input/Input';
+import {SCustomInput} from '@visualizar/common/Input/Input';
 import {InputStyle} from '@visualizar/lib/styles/default/Input/input.style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {SCustomButton} from '@visualizar/components/Button/Button';
-import {EmailInput} from '@visualizar/components/Input/atoms/input.atom';
+import {SCustomButton} from '@visualizar/common/Button/Button';
+import {EmailInput} from '@visualizar/common/Input/atoms/input.atom';
 
 export const ForgotPassword = ({navigation}: IForgotPasswordProps) => {
   const {width, height} = useWindowDimensions();

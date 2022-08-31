@@ -1,6 +1,6 @@
 import {Text} from 'react-native';
 import styled from 'styled-components';
-import {IText, ITitle} from '@visualizar/components/Text/interfaces/Text';
+import {IText, ITitle} from '@visualizar/common/Text/interfaces/Text';
 import {colors} from '@visualizar/lib/theme/colors';
 
 export const STitle = styled(Text)`

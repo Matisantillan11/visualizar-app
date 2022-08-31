@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {StyleSheet, TextInput, View} from 'react-native';
-import {IInput} from '@visualizar/components/Input/interfaces/Input';
+import {IInput} from '@visualizar/common/Input/interfaces/Input';
 import {colors} from '@visualizar/lib/theme/colors';
 
 export const SInput = styled(TextInput)`

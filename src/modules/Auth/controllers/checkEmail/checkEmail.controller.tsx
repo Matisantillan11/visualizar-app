@@ -1,5 +1,5 @@
 import React from 'react';
-import {CheckEmail} from '@visualizar/pages/checkEmail/checkEmail';
+import {CheckEmail} from '@visualizar/modules/Auth/pages/checkEmail/checkEmail';
 import {Linking} from 'react-native';
 import Toast from 'react-native-toast-message';
 

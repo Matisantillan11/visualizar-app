@@ -8,9 +8,9 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
-import {SText, STitle} from '@visualizar/components/Text';
-import {SCustomInput} from '@visualizar/components/Input/Input';
-import {SCustomButton} from '@visualizar/components/Button/Button';
+import {SText, STitle} from '@visualizar/common/Text';
+import {SCustomInput} from '@visualizar/common/Input/Input';
+import {SCustomButton} from '@visualizar/common/Button/Button';
 import {colors} from '@visualizar/lib/theme/colors';
 
 //styles
@@ -21,11 +21,11 @@ import {InputStyle} from '@visualizar/lib/styles/default/Input/input.style';
 import Hero from '@visualizar/assets/images/secure-login.png';
 
 //props
-import {ILoginProps} from '@visualizar/controllers/login/login.controller';
+import {ILoginProps} from '@visualizar/modules/Auth/controllers/login/login.controller';
 import {
   EmailInput,
   PasswordInput,
-} from '@visualizar/components/Input/atoms/input.atom';
+} from '@visualizar/common/Input/atoms/input.atom';
 
 export interface ILoginComponentProps extends ILoginProps {
   email?: string;

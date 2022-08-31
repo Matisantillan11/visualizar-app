@@ -13,7 +13,7 @@ import hero from '@visualizar/assets/images/virtual-reality.png';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {StackScreenProps} from '@react-navigation/stack';
 import {ImageStyle} from '@visualizar/lib/styles/default/image/image.style';
-import {SText} from '@visualizar/components/Text';
+import {SText} from '@visualizar/common/Text';
 import SplashScreen from 'react-native-splash-screen';
 import {RootStackParamList} from '@visualizar/navigators/AuthNavigator';
 
