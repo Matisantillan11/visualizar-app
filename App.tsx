@@ -8,21 +8,34 @@
  * @format
  */
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, {Suspense} from 'react';
 import {AuthNavigator} from './src/navigators/AuthNavigator';
 import {NavigationContainer} from '@react-navigation/native';
 import Toast from 'react-native-toast-message';
 import {toastConfig} from '@visualizar/utils/toast.config';
+import {
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
 import {Provider} from 'jotai';
+import {ActivityIndicator} from 'react-native';
+import {Loader} from '@visualizar/common/Loader/Loader';
 
+const queryClient = new QueryClient();
 const App = () => {
   return (
-    <Provider>
-      <NavigationContainer>
-        <AuthNavigator />
-        <Toast config={toastConfig} />
-      </NavigationContainer>
-    </Provider>
+    <QueryClientProvider client={queryClient}>
+      <Provider>
+        <Suspense fallback={<Loader />}>
+          <NavigationContainer>
+            <AuthNavigator />
+            <Toast config={toastConfig} />
+          </NavigationContainer>
+        </Suspense>
+      </Provider>
+    </QueryClientProvider>
   );
 };
 

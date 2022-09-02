@@ -26,15 +26,26 @@ import {
   EmailInput,
   PasswordInput,
 } from '@visualizar/common/Input/atoms/input.atom';
+import {Loader} from '@visualizar/common/Loader/Loader';
 
 export interface ILoginComponentProps extends ILoginProps {
   email?: string;
   password?: string;
-  setEmail?: any;
+  authenticate: () => void;
+  isAuthenticated: boolean;
+  isLoading: boolean;
 }
-export const Login = ({navigation}: ILoginComponentProps) => {
+export const Login = ({
+  navigation,
+  authenticate,
+  isLoading,
+}: ILoginComponentProps) => {
   const {width, height} = useWindowDimensions();
   const margin = width * 0.03;
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <SafeAreaView>
       <Image
@@ -90,6 +101,7 @@ export const Login = ({navigation}: ILoginComponentProps) => {
           textColor={colors.white}
           textWeight="700"
           textSize="14px"
+          onPress={authenticate}
         />
         <SCustomButton
           backgroundColor={colors.darkWhite}

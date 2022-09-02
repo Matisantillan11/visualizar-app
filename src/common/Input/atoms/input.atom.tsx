@@ -6,11 +6,12 @@ import {useWindowDimensions} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import {SCustomInput} from '../Input';
+import {IInput} from '../interfaces/Input';
 
 export const emailAtom = atom<string>('');
 export const passwordAtom = atom<string>('');
 
-export const EmailInput = (margin: any) => {
+export const EmailInput = ({margin}: IInput) => {
   const [emailValue, setEmailValue] = useAtom(emailAtom);
 
   return (
@@ -26,6 +27,7 @@ export const EmailInput = (margin: any) => {
       marginR="25px"
       onChangeText={(value: string) => setEmailValue(value)}
       value={emailValue}
+      autoCapitalize="none"
       leftIcon={
         <Icon name="alternate-email" size={15} color={colors.lightGray} />
       }
@@ -33,7 +35,7 @@ export const EmailInput = (margin: any) => {
   );
 };
 
-export const PasswordInput = (margin: any) => {
+export const PasswordInput = ({margin}: IInput) => {
   const [passwordValue, setPasswordValue] = useAtom(passwordAtom);
   return (
     <SCustomInput
@@ -45,6 +47,7 @@ export const PasswordInput = (margin: any) => {
       placeholderTextColor={colors.lightGray}
       name="password"
       value={passwordValue}
+      autoCapitalize="none"
       onChangeText={(value: string) => setPasswordValue(value)}
       style={InputStyle.inputStyle}
       leftIcon={<Icon name="lock" size={15} color={colors.lightGray} />}

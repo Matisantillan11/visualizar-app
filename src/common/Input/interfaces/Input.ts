@@ -1,4 +1,7 @@
-export interface IInput {
+import {TextInputProps} from 'react-native';
+
+export interface IInput extends TextInputProps {
+  margin?: number;
   color?: string;
   size?: string;
   weight?: string;

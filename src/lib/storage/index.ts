@@ -15,26 +15,29 @@ export const useStorage = () => {
   };
 
   const get = async (key: string) => {
+    let finalValue: string | null = null;
     try {
-      const value = await AsyncStorage.getItem(key);
-
-      if (value == undefined || value == null) {
-        Toast.show({
-          type: 'error',
-          text1: 'Opsss....something went wrong',
-          text2: `Cannot get key ${key}`,
-        });
-
-        return 1;
-      }
-      return value;
+      await AsyncStorage.getItem(key).then((collect: string | null) => {
+        if (collect !== null) {
+          finalValue = collect;
+        } else {
+          Toast.show({
+            type: 'error',
+            text1: 'Opsss....something went wrong',
+            text2: `Cannot get key ${key}`,
+          });
+        }
+      });
     } catch (error) {
       Toast.show({
         type: 'error',
         text1: 'Opsss....something went wrong',
         text2: `Cannot get key ${key}`,
       });
+
+      console.log({error});
     }
+    return finalValue;
   };
 
   return {store, get};
