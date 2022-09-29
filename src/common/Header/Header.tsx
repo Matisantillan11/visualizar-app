@@ -2,7 +2,7 @@ import {colors} from '@visualizar/lib/theme/colors';
 import React from 'react';
 import {Text, View, SafeAreaView} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import {IHeader} from './interfaces/Header.interface';
 
 const SHeader = styled(View)`

@@ -1,6 +1,13 @@
+import {BookCard} from '@visualizar/common/Cards/BookCard';
 import React from 'react';
-import {Text} from 'react-native';
+import {ScrollView, Text} from 'react-native';
 
 export const Home = () => {
-  return <Text>Home</Text>;
+  return (
+    <ScrollView horizontal>
+      <BookCard />
+      <BookCard />
+      <BookCard />
+    </ScrollView>
+  );
 };
