@@ -17,11 +17,9 @@ const SImage = styled(Image)`
   border-radius: 20;
 `;
 
-export const BookCard = () => {
-  const {width, height} = useWindowDimensions();
-
+export const BookCard = ({width, height}: ISCard) => {
   return (
-    <SCard width={width * 0.4} height={height * 0.3}>
+    <SCard width={width} height={height}>
       <SImage
         source={{
           uri: 'https://images-na.ssl-images-amazon.com/images/I/515fWvs+6bL._SX331_BO1,204,203,200_.jpg',
