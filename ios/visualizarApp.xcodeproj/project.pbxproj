@@ -79,6 +79,7 @@
 		C751421A816F4293893A9B08 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Poppins/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		C82AFBD3DC1F4081B15FE85F /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins/Poppins-Black.ttf"; sourceTree = "<group>"; };
 		DD0AB12B289487FF00CF1431 /* Splash-img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Splash-img.png"; path = "../../../../../Downloads/Splash-img.png"; sourceTree = "<group>"; };
+		DD454E8828E645640097D26C /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		DDDACE7C2891DE1600938C31 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		DDDACE7D2891DE3B00938C31 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -223,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				DDDACE7D2891DE3B00938C31 /* MaterialIcons.ttf */,
+				DD454E8828E645640097D26C /* MaterialCommunityIcons.ttf */,
 				DDDACE7C2891DE1600938C31 /* Ionicons.ttf */,
 			);
 			path = Fonts;
