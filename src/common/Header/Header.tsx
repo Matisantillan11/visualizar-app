@@ -1,9 +1,16 @@
 import {colors} from '@visualizar/lib/theme/colors';
 import React from 'react';
-import {Text, View, SafeAreaView} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  useWindowDimensions,
+} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import styled from 'styled-components';
 import {IHeader} from './interfaces/Header.interface';
+import HorizontalLogo from '@visualizar/assets/images/logo-visualizar-horizontal.png';
 
 const SHeader = styled(View)`
   height: 75px;
@@ -50,24 +57,19 @@ const SPointsText = styled(Text)`
 `;
 
 export const Header = ({backButton, username, points}: IHeader) => {
+  const {width, height} = useWindowDimensions();
   return (
     <SafeAreaView>
       <SHeader>
         <STitleContainer>
           {backButton}
-          <SHeaderTitle style={backButton ? {marginHorizontal: 10} : null}>
-            {username}
-          </SHeaderTitle>
-        </STitleContainer>
-        <SPointsContainer>
-          <Icon
-            style={{transform: [{rotate: '45deg'}]}}
-            name="swap-vert-circle"
-            size={30}
-            color={colors.white}
+          <Image
+            source={HorizontalLogo}
+            style={{width: width * 0.34, height: height * 0.04}}
           />
-          <SPointsText>{points}</SPointsText>
-        </SPointsContainer>
+        </STitleContainer>
+
+        <Icon name="power" size={30} color={colors.gray} />
       </SHeader>
     </SafeAreaView>
   );

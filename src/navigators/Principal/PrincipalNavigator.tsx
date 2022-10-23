@@ -34,7 +34,7 @@ export const PrincipalNavigator = () => {
         },
       })}>
       <Tab.Screen name="Books" component={HomeScreen} />
-      <Tab.Screen name="Fill" component={HomeScreen} />
+      <Tab.Screen name="Favorites" component={HomeScreen} />
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Animations" component={HomeScreen} />
       <Tab.Screen name="Profile" component={HomeScreen} />

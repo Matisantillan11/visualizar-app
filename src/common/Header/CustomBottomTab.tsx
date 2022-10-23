@@ -39,20 +39,27 @@ const STab = styled(View)`
 export const CustomBottomTab = (props: BottomTabBarProps) => {
   const {navigation, state} = props;
   const {routes} = state;
+  const {isFocused} = navigation;
   const {width, height} = useWindowDimensions();
-
+  console.log({props});
   return (
     <SafeAreaView>
       <STab style={{width, height: height * 0.06}}>
         {routes.map(route => {
           let iconName: string = '';
+          let color = colors.darkPurple;
+          let sizeHeight = 25;
+          let sizeWidth = 25;
 
           switch (route.name) {
             case 'Books':
+              console.log({isFocused: isFocused()});
+              color = isFocused() ? colors.darkPurple : colors.gray;
               iconName = 'book';
               break;
-            case 'Fill':
-              iconName = 'book';
+            case 'Favorites':
+              sizeWidth = 28;
+              iconName = 'star';
               break;
             case 'Animations':
               iconName = 'camera';
@@ -68,7 +75,10 @@ export const CustomBottomTab = (props: BottomTabBarProps) => {
                 onPress={() => {
                   navigation.navigate(route.name);
                 }}>
-                <Image source={HomeSharp} style={{width: 25, height: 25}} />
+                <Image
+                  source={HomeSharp}
+                  style={{width: sizeWidth, height: sizeHeight}}
+                />
               </SHomeButton>
             );
           }
@@ -82,7 +92,7 @@ export const CustomBottomTab = (props: BottomTabBarProps) => {
                 width: 45,
                 height: 35,
               }}>
-              <Icon name={iconName} size={25} color={colors.darkPurple} />
+              <Icon name={iconName} size={sizeWidth} color={color} />
               <Text
                 numberOfLines={1}
                 style={{

@@ -1,6 +1,6 @@
 export type PrincipalStackList = {
   Home: undefined;
-  Fill: undefined;
+  Favorites: undefined;
   Books: undefined;
   Animations: undefined;
   Profile: undefined;
