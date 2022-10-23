@@ -3,11 +3,13 @@ import {FavoriteCard} from '@visualizar/common/Cards/FavoriteCard';
 import {STitle} from '@visualizar/common/Text';
 import React from 'react';
 import {ScrollView, Text, useWindowDimensions, View} from 'react-native';
+import {BannerHome} from '../../components/BannerHome';
 
 export const Home = () => {
   const {width, height} = useWindowDimensions();
   return (
     <ScrollView style={{flex: 1}}>
+      <BannerHome />
       <STitle style={{marginLeft: width * 0.05, fontSize: 20}}>
         Libros destacados
       </STitle>
