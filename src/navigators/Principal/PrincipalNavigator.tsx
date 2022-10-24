@@ -12,6 +12,7 @@ import {Pressable, Text} from 'react-native';
 import {Header} from '@visualizar/common/Header/Header';
 import styled from 'styled-components';
 import {CustomBottomTab} from '@visualizar/common/Header/CustomBottomTab';
+import {BookScreen} from '@visualizar/modules/Principal/pages/Books/BookScreen';
 const Tab = createBottomTabNavigator<PrincipalStackList>();
 
 export const PrincipalNavigator = () => {
@@ -33,7 +34,7 @@ export const PrincipalNavigator = () => {
           return <Header username={username} points="250 Points" />;
         },
       })}>
-      <Tab.Screen name="Books" component={HomeScreen} />
+      <Tab.Screen name="Books" component={BookScreen} />
       <Tab.Screen name="Favorites" component={HomeScreen} />
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Animations" component={HomeScreen} />

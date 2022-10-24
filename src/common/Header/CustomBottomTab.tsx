@@ -92,7 +92,14 @@ export const CustomBottomTab = (props: BottomTabBarProps) => {
                 width: 45,
                 height: 35,
               }}>
-              <Icon name={iconName} size={sizeWidth} color={color} />
+              <Icon
+                onPress={() => {
+                  navigation.navigate(route.name);
+                }}
+                name={iconName}
+                size={sizeWidth}
+                color={color}
+              />
               <Text
                 numberOfLines={1}
                 style={{
