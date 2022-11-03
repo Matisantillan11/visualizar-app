@@ -3,4 +3,5 @@ export interface ISCard {
   height: number;
   title?: string;
   author?: string;
+  margin?: string;
 }

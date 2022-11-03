@@ -11,20 +11,44 @@ export const ViewBox = ({isFocused, changeViewMode}: any) => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Icon
-        style={{marginHorizontal: 5}}
-        name="grid-outline"
-        size={20}
-        onPress={() => changeViewMode('BoxMode')}
-        color={isFocused == 'BoxMode' ? colors.mediumPurple : colors.gray}
-      />
-      <Icon
-        style={{marginHorizontal: 5}}
-        name="list-outline"
-        size={20}
-        onPress={() => changeViewMode('ListMode')}
-        color={isFocused == 'ListMode' ? colors.mediumPurple : colors.gray}
-      />
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: 29,
+          height: 29,
+          backgroundColor:
+            isFocused == 'BoxMode' ? colors.mediumPurple : 'transparent',
+          borderRadius: 8,
+        }}>
+        <Icon
+          style={{marginHorizontal: 5}}
+          name="grid-outline"
+          size={20}
+          onPress={() => changeViewMode('BoxMode')}
+          color={isFocused == 'BoxMode' ? colors.white : colors.darkPurple}
+        />
+      </View>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: 29,
+          height: 29,
+          backgroundColor:
+            isFocused == 'ListMode' ? colors.mediumPurple : 'transparent',
+          borderRadius: 8,
+        }}>
+        <Icon
+          style={{marginHorizontal: 5}}
+          name="list-outline"
+          size={20}
+          onPress={() => changeViewMode('ListMode')}
+          color={isFocused == 'ListMode' ? colors.white : colors.darkPurple}
+        />
+      </View>
     </View>
   );
 };

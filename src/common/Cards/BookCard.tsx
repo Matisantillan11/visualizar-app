@@ -9,7 +9,7 @@ const SCard = styled(View)<ISCard>`
   width: ${({width}: ISCard) => width};
   height: ${({height}: ISCard) => height};
   border-radius: 20;
-  margin: 35px 20px;
+  margin: ${({margin}: ISCard) => (margin ? margin : '20px')};
 `;
 
 const SImage = styled(Image)`
@@ -19,9 +19,9 @@ const SImage = styled(Image)`
   border-radius: 20;
 `;
 
-export const BookCard = ({width, height, title, author}: ISCard) => {
+export const BookCard = ({width, height, margin, title, author}: ISCard) => {
   return (
-    <SCard width={width} height={height}>
+    <SCard width={width} height={height} margin={margin}>
       <SImage
         source={{
           uri: 'https://images-na.ssl-images-amazon.com/images/I/515fWvs+6bL._SX331_BO1,204,203,200_.jpg',

@@ -19,6 +19,7 @@ export const BookScreen = () => {
           flexDirection: 'row',
           justifyContent: 'space-between',
           paddingHorizontal: 20,
+          marginBottom: 10,
         }}>
         <STitle> Todos los libros </STitle>
         <ViewBox isFocused={isFocused} changeViewMode={handleViewMode} />
@@ -33,30 +34,42 @@ export const BookScreen = () => {
             paddingBottom: 50,
           }}>
           <BookCard
+            margin="35px 20px"
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
           />
           <BookCard
+            margin="35px 20px"
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
           />
           <BookCard
+            margin="35px 20px"
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
           />
           <BookCard
+            margin="35px 20px"
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
           />
           <BookCard
+            margin="35px 20px"
+            width={width * 0.39}
+            height={height * 0.3}
+            title="The tiny dragon"
+            author="Rupert Carter"
+          />
+          <BookCard
+            margin="35px 20px"
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
