@@ -84,30 +84,28 @@ export const CustomBottomTab = (props: BottomTabBarProps) => {
           }
 
           return (
-            <View
-              style={{
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginHorizontal: 5,
-                width: 45,
-                height: 35,
+            <Pressable
+              onPress={() => {
+                navigation.navigate(route.name);
               }}>
-              <Icon
-                onPress={() => {
-                  navigation.navigate(route.name);
-                }}
-                name={iconName}
-                size={sizeWidth}
-                color={color}
-              />
-              <Text
-                numberOfLines={1}
+              <View
                 style={{
-                  fontSize: 12,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginHorizontal: 5,
+                  width: 45,
+                  height: 35,
                 }}>
-                {route.name}
-              </Text>
-            </View>
+                <Icon name={iconName} size={sizeWidth} color={color} />
+                <Text
+                  numberOfLines={1}
+                  style={{
+                    fontSize: 12,
+                  }}>
+                  {route.name}
+                </Text>
+              </View>
+            </Pressable>
           );
         })}
       </STab>
