@@ -14,6 +14,7 @@ import styled from 'styled-components';
 import {CustomBottomTab} from '@visualizar/common/Header/CustomBottomTab';
 import {BookScreen} from '@visualizar/modules/Principal/pages/Books/BookScreen';
 import {FavoriteScreen} from '@visualizar/modules/Principal/pages/Favorites/Favorite.screen';
+import {UserProfileScreen} from '@visualizar/modules/Principal/pages/Profile/UserProfile';
 const Tab = createBottomTabNavigator<PrincipalStackList>();
 
 export const PrincipalNavigator = () => {
@@ -39,7 +40,7 @@ export const PrincipalNavigator = () => {
       <Tab.Screen name="Favorites" component={FavoriteScreen} />
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Animations" component={HomeScreen} />
-      <Tab.Screen name="Profile" component={HomeScreen} />
+      <Tab.Screen name="Profile" component={UserProfileScreen} />
     </Tab.Navigator>
   );
 };
