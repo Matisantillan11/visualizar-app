@@ -7,9 +7,14 @@ import {BookCard} from '@visualizar/common/Cards/BookCard';
 export const BookScreen = () => {
   const {width, height} = useWindowDimensions();
   const [isFocused, setIsFocused] = useState<'BoxMode' | 'ListMode'>('BoxMode');
-
+  const [isHorizontal, setIsHorizontal] = useState<boolean>(false);
   const handleViewMode = (viewMode: 'BoxMode' | 'ListMode') => {
     setIsFocused(viewMode);
+    if (viewMode === 'ListMode') {
+      setIsHorizontal(true);
+    } else {
+      setIsHorizontal(false);
+    }
   };
 
   return (
@@ -27,53 +32,60 @@ export const BookScreen = () => {
       <ScrollView>
         <View
           style={{
-            flexDirection: 'row',
+            flexDirection: isHorizontal ? 'column' : 'row',
             justifyContent: 'center',
+            alignItems: 'center',
             flexWrap: 'wrap',
             flex: 1,
             paddingBottom: 50,
           }}>
           <BookCard
-            margin="35px 20px"
+            margin={isHorizontal ? '15px' : '35px 20px'}
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
+            horizontal={isHorizontal}
           />
           <BookCard
-            margin="35px 20px"
+            margin={isHorizontal ? '15px' : '35px 20px'}
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
+            horizontal={isHorizontal}
           />
           <BookCard
-            margin="35px 20px"
+            margin={isHorizontal ? '15px' : '35px 20px'}
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
+            horizontal={isHorizontal}
           />
           <BookCard
-            margin="35px 20px"
+            margin={isHorizontal ? '15px' : '35px 20px'}
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
+            horizontal={isHorizontal}
           />
           <BookCard
-            margin="35px 20px"
+            margin={isHorizontal ? '15px' : '35px 20px'}
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
+            horizontal={isHorizontal}
           />
           <BookCard
-            margin="35px 20px"
+            margin={isHorizontal ? '15px' : '35px 20px'}
             width={width * 0.39}
             height={height * 0.3}
             title="The tiny dragon"
             author="Rupert Carter"
+            horizontal={isHorizontal}
           />
         </View>
       </ScrollView>
